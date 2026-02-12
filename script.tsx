@@ -11,6 +11,6 @@ Play?.addEventListener("click", () => {
     }
 });
 function render() {
-    return <button type="button" id="Play">Play Audio</button>
+    return <button type="button" id="Play">Update Audio (Play/Pause)</button>
 }
 render();
