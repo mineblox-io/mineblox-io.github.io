@@ -13,3 +13,4 @@ Play?.addEventListener("click", () => {
 function render() {
     return <button type="button" id="Play">Play Audio</button>
 }
+render();
