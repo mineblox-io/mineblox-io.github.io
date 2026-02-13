@@ -2,11 +2,11 @@
     "license": "MIT",
     "type": "texture",
     "path": [
-        "assets/textures/grass/nx.png",
-        "assets/textures/grass/ny.png",
-        "assets/textures/grass/nz.png",
-        "assets/textures/grass/px.png",
-        "assets/textures/grass/py.png",
-        "assets/textures/grass/pz.png"
+        "assets/textures/grass/nx.svg",
+        "assets/textures/grass/ny.svg",
+        "assets/textures/grass/nz.svg",
+        "assets/textures/grass/px.svg",
+        "assets/textures/grass/py.svg",
+        "assets/textures/grass/pz.svg"
     ]
 }
