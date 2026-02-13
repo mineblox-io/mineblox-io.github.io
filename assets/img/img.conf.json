@@ -1,0 +1,8 @@
+{
+    "img-conf": {
+        "formats": "ico, png, jpg, jpeg, webp, avif",
+        "sizes": "16, 32, 48, 64, 128, 256, 512",
+        "background": "transparent",
+        "quality": 80
+    }
+}
