@@ -8,6 +8,18 @@
             "args": [
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ],
+            "name": "啟動延伸模組",
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"
+            ],
+            "preLaunchTask": "npm",
+            "request": "launch",
+            "type": "extensionHost"
+        },
+        {
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
             "name": "Launch Extension",
             "outFiles": [
                 "${workspaceFolder}/out/**/*.js"
