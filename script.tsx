@@ -32,3 +32,9 @@ audioLoader.load( 'Craig_Ballie_-_Building_Us_(mp3.pm).mp3', function( buffer ) 
 	sound.setVolume( 0.5 );
 	sound.play();
 } );
+import Swal from 'sweetalert2';
+Swal.fire(
+	"Test Alert",
+	"This is a test alert using SweetAlert2 library.",
+	"success"
+)
