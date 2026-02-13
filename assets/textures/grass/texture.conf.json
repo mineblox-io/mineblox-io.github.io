@@ -1,0 +1,12 @@
+{
+    "license": "MIT",
+    "type": "texture",
+    "path": [
+        "assets/textures/grass/nx.png",
+        "assets/textures/grass/ny.png",
+        "assets/textures/grass/nz.png",
+        "assets/textures/grass/px.png",
+        "assets/textures/grass/py.png",
+        "assets/textures/grass/pz.png"
+    ]
+}
