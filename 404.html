@@ -2,36 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mineblox.io (Error 404 - Page Not Found)</title>
+  <title>Mineblox.io - Error 404</title>
   <style>
     body {
-      background-color: #f0f0f0;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 10%;
-      color: #333;
+      color: #fff;
+      background: linear-gradient(-45deg, #6dbf4b, #4a90e2, #f39c12, #8e44ad);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
     }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
     h1 {
       font-size: 120px;
       margin: 0;
     }
+
     p {
       font-size: 24px;
       margin: 20px 0;
-      color: #666;
     }
+
     a {
       display: inline-block;
       margin-top: 30px;
       padding: 12px 24px;
-      background-color: #333;
+      background-color: rgba(0,0,0,0.6);
       color: #fff;
       text-decoration: none;
       border-radius: 8px;
       font-size: 18px;
+      transition: background-color 0.3s ease;
     }
+
     a:hover {
-      background-color: #555;
+      background-color: rgba(0,0,0,0.8);
     }
   </style>
 </head>
