@@ -295,23 +295,6 @@ function animatePlayer() {
 	}
 }
 setInterval(animatePlayer, 100);
-function genTrees() {
-	const treeGeometry = new THREE.ConeGeometry(0.5, 2, 8);
-	const treeMaterial = new THREE.MeshBasicMaterial({ color: 0x228B22 });
-	for (let i = 0; i < 20; i++) {
-		const tree = new THREE.Mesh(treeGeometry, treeMaterial);
-		tree.position.set(Math.random() * 20 - 10, 1, Math.random() * 20 - 10);
-		scene.add(tree);
-	}
-}
-genTrees();
-function animateTrees() {
-	const trees = scene.children.filter(child => child instanceof THREE.Mesh && child.geometry instanceof THREE.ConeGeometry && (child.material as THREE.MeshBasicMaterial).color.getHex() === 0x228B22) as THREE.Mesh[];
-	trees.forEach(tree => {
-		tree.position.y += Math.sin(Date.now() * 0.001) * 0.01;
-	});
-}
-setInterval(animateTrees, 100);
 function shaders() {
 	const shaderMaterial = new THREE.ShaderMaterial({
 		uniforms: {
@@ -342,3 +325,31 @@ function shaders() {
 	setInterval(animateShader, 100);
 }
 shaders();
+function EXPERINCE() {
+	const expGeometry = new THREE.TorusGeometry(0.5, 0.2, 16, 100);
+	// Create a material for the experience orbs with a bright green and yellow gradient
+	const expMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+	for (let i = 0; i < 10; i++) {
+		const exp = new THREE.Mesh(expGeometry, expMaterial);
+		exp.position.set(Math.random() * 20 - 10, 1, Math.random() * 20 - 10);
+		scene.add(exp);
+	}
+}
+EXPERINCE();
+function animateEXP() {
+	const exps = scene.children.filter(child => child instanceof THREE.Mesh && child.geometry instanceof THREE.TorusGeometry && (child.material as THREE.MeshBasicMaterial).color.getHex() === 0xffff00) as THREE.Mesh[];
+	// Rotate the experience orbs
+	exps.forEach(exp => {
+		exp.rotation.x += 0.01;
+		exp.rotation.y += 0.01;
+	});
+	// Move the EXP orbs To Nearest Player
+	const player = scene.children.find(child => child instanceof THREE.Mesh && child.geometry instanceof THREE.BoxGeometry && (child.material as THREE.MeshBasicMaterial).color.getHex() === 0x00ff00) as THREE.Mesh;
+	if (player) {
+		exps.forEach(exp => {
+			const direction = new THREE.Vector3().subVectors(player.position, exp.position).normalize();
+			exp.position.add(direction.multiplyScalar(0.05));
+		});
+	}
+}
+setInterval(animateEXP, 100);
