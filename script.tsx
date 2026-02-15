@@ -124,6 +124,20 @@ function buildMenu() {
 	document.body.appendChild(menu);
 }
 buildMenu();
+function RandomizeMapBlocks() {
+	const blocks = scene.children.filter(child => child instanceof THREE.Mesh && child.geometry instanceof THREE.BoxGeometry) as THREE.Mesh[];
+	blocks.forEach(block => {
+		const randomColor = Math.random() * 0xffffff;
+		(block.material as THREE.MeshBasicMaterial).color.setHex(randomColor);
+	});
+}
+function randomizeMapBlocksHeight() {
+	const blocks = scene.children.filter(child => child instanceof THREE.Mesh && child.geometry instanceof THREE.BoxGeometry) as THREE.Mesh[];
+	blocks.forEach(block => {
+		const randomHeight = Math.random() * 2 + 0.5; // Random height between 0.5 and 2.5
+		block.scale.y = randomHeight;
+	});
+}
 function HandleMenuButtons() {
 	const menuButtons = document.querySelector('div');
 	if (menuButtons !== null) {
