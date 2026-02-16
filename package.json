@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@next/third-parties": "^16.1.6",
-    "@types/next": "^8.0.7",
+    "@types/next": "^9.0.0",
     "@types/node": "^25.2.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
